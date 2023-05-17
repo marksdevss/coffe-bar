@@ -1,0 +1,538 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+*{
+   box-sizing: border-box;
+   margin: 0%;
+   padding: 0%;
+   scroll-behavior: smooth;
+}
+
+
+
+
+#cafee{
+  
+    opacity: calc(97%);
+    margin-right: 24%;
+    margin-left: 5%;
+    width: 10%;
+    animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+ul.navbar {
+  width: 100%;
+  display: inline-flex;
+    list-style-type: none;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #b18383; 
+    margin: 0;
+    padding: 10; 
+    overflow: hidden;
+  }
+
+  ul.navbar li {
+    float: left;
+    display: block;
+    text-align: right;
+    list-style: none;
+
+  }
+
+  ul.navbar li a {
+    display: flex;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+  ul.navbar li a:hover {
+    background-color: #925a5a62;
+  }
+
+  .sublist {
+
+    display: none;
+    position:absolute;
+    background-color: #b18383;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .sublist li a {
+    color: #333;
+  }
+  
+  .navbar li:hover .sublist {
+    display: block;
+  }
+
+  
+   
+ 
+   .container-box{
+      margin-bottom: 10%;  
+      padding:9%;
+      margin-left: 23%;
+       width: 50%;
+       overflow: auto; /* Limpa o float */
+      background-color:#b18383;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: glowing-border 2s infinite;
+      transition: transform 0.3s;
+  }
+
+  .container-box:hover {
+    transform: scale(1.1);
+  }
+
+
+
+  @keyframes glowing-border {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  #cafe{
+    width: 20%;
+    margin-left: 5%;
+    float: left; /* Posiciona a imagem à esquerda do texto */
+     
+  }
+
+
+
+  #frase{
+    margin-left: 29%;
+    font-family: 'Sawarabi Mincho', serif;
+    font-weight: 800;
+    color: white;
+    font-size: xx-large;
+    animation: blinking 5s infinite;
+    
+  }
+
+
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#frase2{
+  margin-left: 10%;
+  font-family: 'Sawarabi Mincho', serif;
+  font-weight: 200;
+  color: white;
+  width: 0%;
+  font-size: large;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(30) 1s infinite;
+}
+
+#frase3{
+  margin-left: 20%;
+  font-family: 'Sawarabi Mincho', serif;
+  font-weight: 500;
+  color: white;
+  width: 56%;
+  font-size: large;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(30) 1s infinite;
+  margin-bottom: 10%;
+
+}
+
+#audio-play{
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.audio-player {
+  width: 200px;
+  margin: 20px;
+  margin-bottom: 2%;
+  margin-left: 2%;
+}
+
+.audio-player audio {
+  width: 200%;
+  display: block;
+  outline: none;
+}
+
+.audio-player audio::-webkit-media-controls-panel {
+  background-color: #b18383;;
+  color: #333;
+  border-radius: 5px;
+}
+
+.audio-player audio::-webkit-media-controls-play-button {
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.audio-player audio::-webkit-media-controls-play-button:hover {
+  background-color: #e7e6e6;
+}
+
+.destaque {
+  font-family: 'Sawarabi Mincho', serif;
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
+  background-color: #b18383;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  transition: filter 0.3s ease;
+
+}
+
+.card:hover img {
+  filter: blur(3px); /* Aplica o efeito de desfoque */
+}
+
+.card:hover ~ .card img {
+  filter: brightness(0.6)
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+}
+
+.card-content p {
+  margin-bottom: 0;
+}
+
+.card-content h3:hover{
+color: #e7e6e6;
+}
+
+.footer {
+  width: 98%;
+  background-color: #b18383;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.horarios h3,
+.contato h3 {
+  color:white;
+ font-family: 'Sawarabi Mincho', serif;
+  margin-bottom: 10px;
+}
+
+.horarios ul,
+.contato p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: small;
+  font-weight: 900;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+.horarios li {
+  margin-bottom: 5px;
+}
+
+.feito-por{
+  margin-right: 4%;
+  font-family:'Sawarabi Mincho', serif;
+  font-weight: 200;
+  font-size: medium;
+  color: #e7e6e6;
+}
+
+.depoimentos {
+font-family: 'Sawarabi Mincho', serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.depoimentos h2 {
+  font-family:'Sawarabi Mincho', serif; ;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.depoimento {
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
+}
+
+
+
+.autor {
+  font-style: italic;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 55px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  *{
+    box-sizing: border-box;
+    pad:0;
+    margin: 0%;
+    scroll-behavior: smooth;
+  }
+
+  #cafee{
+    display: none;
+}
+
+
+  /* Estilos para telas de celular */
+  ul.navbar li a {  
+    
+    gap:5px;
+    display:flex; 
+    font-size: medium;
+    list-style: none;
+    margin-left: 29vh;
+    text-decoration: none;
+    padding: 12px;
+    text-align: center;
+    width: 152vh;
+  }
+
+  
+  ul.navbar li a:hover {
+    background-color: #925a5a62;
+    background-size: cover;
+  }
+
+  .sublist {
+    display: none;
+    position:absolute;
+    background-color: #b18383;
+    min-width: 12px;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .sublist li a {
+    color: #333;
+  }
+  
+  .navbar li:hover .sublist {
+    display: block;
+  }
+
+
+  .container-box {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  #cafe {
+    width: 20%;
+    margin: 0 auto;
+    display: block;
+    float: none;
+  }
+
+  #frase {
+    margin-left: 0;
+    font-size: large;
+    text-align: center;
+  }
+
+  #frase2,
+  #frase3 {
+    margin-left: 0;
+    font-size: small;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .audio-player {
+    margin-top: 6%;
+    margin-bottom: 5%;
+  }
+
+  .card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: filter 0.3s ease;
+  
+  }
+  
+  .card:hover img {
+    filter: blur(3px); /* Aplica o efeito de desfoque */
+  }
+  
+  .card:hover ~ .card img {
+    filter: brightness(0.6)
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  
+  .card-content h3 {
+    margin-top: 0;
+  }
+  
+  .card-content p {
+    margin-bottom: 0;
+  }
+  
+  .card-content h3:hover{
+  color: #e7e6e6;
+  }
+
+
+  .footer {
+    width: 81vh;
+    display: grid;
+  text-align: center;
+  }
+
+  .horarios h3,
+.contato h3 {
+  margin-left: 10vh;
+  gap: 10vh;
+  color:white;
+ font-family: 'Sawarabi Mincho', serif;
+  margin-bottom: 10px;
+}
+
+.horarios ul,
+.contato p {
+  margin-left: 10vh;
+  margin-right: 19;
+  padding: 0;
+  list-style: none;
+  font-size: small;
+  font-weight: 900;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+.horarios li {
+  margin-bottom: 5px;
+}
+
+.feito-por{
+  margin-left: 26%;
+  margin-right: 4%;
+  font-family:'Sawarabi Mincho', serif;
+  font-weight: 200;
+  font-size: medium;
+  color: #e7e6e6;
+}
+
+.depoimentos {
+  font-family: 'Sawarabi Mincho', serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .depoimentos h2 {
+    font-family:'Sawarabi Mincho', serif; ;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .depoimento {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+  }
+  
+  
+  
+  .autor {
+    font-style: italic;
+  }
+  
+  .icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 55px;
+  }
+
+
+
+
+}
